@@ -16,7 +16,7 @@
     "awayTeam": "Cleveland Cavaliers",
     "homeTeam": "Charlotte Hornets",
     "awayOdds": "-345",
-    "homeOdds": "+275",
+    "homeOdds": "+280",
     "favTeam": "Cleveland Cavaliers",
     "leadML": -345,
     "gap": 14
@@ -30,6 +30,17 @@
     "homeOdds": "-400",
     "favTeam": "Detroit Pistons",
     "leadML": -400,
+    "gap": 14
+  },
+  {
+    "sport": "basketball",
+    "gameDate": "2026-11-10T00:40:00Z",
+    "awayTeam": "Memphis Grizzlies",
+    "homeTeam": "Toronto Raptors",
+    "awayOdds": "-122",
+    "homeOdds": "+104",
+    "favTeam": "Memphis Grizzlies",
+    "leadML": -122,
     "gap": 14
   },
   {
@@ -77,36 +88,25 @@
     "gap": 14
   },
   {
-    "sport": "soccer",
-    "gameDate": "2026-11-10T17:45:00Z",
-    "awayTeam": "Chelsea",
-    "homeTeam": "BK Hacken",
-    "awayOdds": "-476",
-    "homeOdds": "+875",
-    "favTeam": "Chelsea",
-    "leadML": -476,
+    "sport": "hockey",
+    "gameDate": "2026-11-11T00:10:00Z",
+    "awayTeam": "Colorado Avalanche",
+    "homeTeam": "Toronto Maple Leafs",
+    "awayOdds": "-161",
+    "homeOdds": "+136",
+    "favTeam": "Colorado Avalanche",
+    "leadML": -161,
     "gap": 14
   },
   {
     "sport": "soccer",
-    "gameDate": "2026-11-10T17:45:00Z",
-    "awayTeam": "Paris FC",
-    "homeTeam": "Real Madrid",
-    "awayOdds": "+475",
-    "homeOdds": "-263",
-    "favTeam": "Real Madrid",
-    "leadML": -263,
-    "gap": 21
-  },
-  {
-    "sport": "soccer",
-    "gameDate": "2026-11-10T20:00:00Z",
-    "awayTeam": "Servette FC",
-    "homeTeam": "AS Roma",
-    "awayOdds": "+800",
-    "homeOdds": "-476",
-    "favTeam": "AS Roma",
-    "leadML": -476,
+    "gameDate": "2026-11-11T22:00:00Z",
+    "awayTeam": "Nautico PE",
+    "homeTeam": "Londrina",
+    "awayOdds": "+405",
+    "homeOdds": "-175",
+    "favTeam": "Londrina",
+    "leadML": -175,
     "gap": 14
   },
   {
@@ -121,6 +121,39 @@
     "gap": 14
   },
   {
+    "sport": "soccer",
+    "gameDate": "2026-11-14T19:30:00Z",
+    "awayTeam": "Avai",
+    "homeTeam": "Am\u00e9rica Mineiro",
+    "awayOdds": "-118",
+    "homeOdds": "+290",
+    "favTeam": "Avai",
+    "leadML": -118,
+    "gap": 14
+  },
+  {
+    "sport": "soccer",
+    "gameDate": "2026-11-14T21:30:00Z",
+    "awayTeam": "Atletico Mineiro",
+    "homeTeam": "Mirassol",
+    "awayOdds": "+260",
+    "homeOdds": "+105",
+    "favTeam": "Mirassol",
+    "leadML": 105,
+    "gap": 14
+  },
+  {
+    "sport": "soccer",
+    "gameDate": "2026-11-14T23:30:00Z",
+    "awayTeam": "Vasco da Gama",
+    "homeTeam": "Chapecoense",
+    "awayOdds": "-156",
+    "homeOdds": "+360",
+    "favTeam": "Vasco da Gama",
+    "leadML": -156,
+    "gap": 14
+  },
+  {
     "sport": "football",
     "gameDate": "2026-11-15T14:30:00Z",
     "awayTeam": "New England Patriots",
@@ -130,5 +163,16 @@
     "favTeam": "Detroit Lions",
     "leadML": -154,
     "gap": 14
+  },
+  {
+    "sport": "football",
+    "gameDate": "2026-11-15T18:00:00Z",
+    "awayTeam": "Kansas City Chiefs",
+    "homeTeam": "Atlanta Falcons",
+    "awayOdds": "-179",
+    "homeOdds": "+150",
+    "favTeam": "Kansas City Chiefs",
+    "leadML": -179,
+    "gap": 20
   }
 ]
