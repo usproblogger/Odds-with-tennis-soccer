@@ -12,19 +12,19 @@ DEFAULT_GROUPS = {
     "football": ["americanfootball_nfl", "americanfootball_ncaaf"],
     "basketball": ["basketball_nba"],
     "hockey": ["icehockey_nhl"],
-    "soccer": ["soccer_uefa_champs_league", "soccer_epl", "soccer_uefa_nations_league", "soccer_usa_mls"]
+    "soccer": ["soccer_uefa_champs_league", "soccer_epl", "soccer_uefa_nations_league"]
 }
 
 NAME_BUZZ = {
-    "djokovic": 96, "alcaraz": 96, "sinner": 95, "medvedev": 90, 
-    "zverev": 89, "tsitsipas": 85, "rublev": 84, "rune": 84, "fritz": 86,
-    "de minaur": 85, "ruud": 85, "paul": 82, "tiafoe": 83, "shelton": 84,
-    "swiatek": 95, "sabalenka": 94, "gauff": 94, "rybakina": 90, "paolini": 86, "zheng": 88,
+    "gauff": 94, "pegula": 90, "kostyuk": 82, "noskova": 80,
+    "mertens": 84, "zhang": 83, "dabrowski": 85, "stefani": 84,
+    "hsieh": 86, "ostapenko": 88, "siniakova": 87, "townsend": 86,
+    "errani": 84, "paolini": 88, "swiatek": 96, "sabalenka": 95,
+    "sinner": 96, "alcaraz": 96, "djokovic": 95, "zverev": 90, "medvedev": 90,
+    "mannarino": 82, "michelsen": 81, "sonego": 82, "halys": 80, "cerundolo": 81,
     "real madrid": 96, "barcelona": 95, "arsenal": 90, "bayern": 92,
-    "manchester city": 94, "liverpool": 93, "chelsea": 88, "inter": 88,
-    "chiefs": 95, "bills": 90, "cowboys": 88, "patriots": 85, "packers": 87, "lions": 86,
-    "celtics": 92, "lakers": 94, "warriors": 91, "heat": 85, "knicks": 87, "cavaliers": 85,
-    "maple leafs": 89, "rangers": 88, "oilers": 87, "blackhawks": 86, "flyers": 82
+    "chiefs": 95, "bills": 90, "cowboys": 88, "celtics": 92, "lakers": 94,
+    "rangers": 88, "oilers": 87
 }
 
 def get_buzz(name):
@@ -76,14 +76,8 @@ def fetch_group_matches(group_label, sport_keys, limit=4):
                 if not commence_time or not is_within_7_days(commence_time):
                     continue
 
-                home_team = event.get("home_team")
-                away_team = event.get("away_team")
-                if not home_team or not away_team:
-                    continue
-
-                home_buzz = get_buzz(home_team)
-                away_buzz = get_buzz(away_team)
-                gap = abs(home_buzz - away_buzz)
+                home_team = event.get("home_team", "")
+                away_team = event.get("away_team", "")
 
                 bookmakers = event.get("bookmakers", [])
                 if not bookmakers:
@@ -101,6 +95,11 @@ def fetch_group_matches(group_label, sport_keys, limit=4):
                 if len(h2h_outcomes) < 2:
                     continue
 
+                # Ensure player/team names exist
+                if not away_team or not home_team:
+                    away_team = h2h_outcomes[0].get("name", "Player 1")
+                    home_team = h2h_outcomes[1].get("name", "Player 2")
+
                 away_price = None
                 home_price = None
                 for out in h2h_outcomes:
@@ -111,8 +110,14 @@ def fetch_group_matches(group_label, sport_keys, limit=4):
                         home_price = out.get("price")
 
                 if not away_price or not home_price:
-                    away_price = h2h_outcomes[0].get("price")
-                    home_price = h2h_outcomes[1].get("price")
+                    away_price = h2h_outcomes[0].get("price", 1.91)
+                    home_price = h2h_outcomes[1].get("price", 1.91)
+                    away_team = h2h_outcomes[0].get("name", away_team)
+                    home_team = h2h_outcomes[1].get("name", home_team)
+
+                home_buzz = get_buzz(home_team)
+                away_buzz = get_buzz(away_team)
+                gap = abs(home_buzz - away_buzz)
 
                 away_ml = to_american_odds(away_price)
                 home_ml = to_american_odds(home_price)
@@ -145,44 +150,48 @@ def fetch_odds():
         print("Error: ODDS_API_KEY secret is missing.")
         return all_data
 
-    # Query active sports catalogue dynamically
-    tennis_keys = []
-    soccer_keys = []
+    # Step 1: Discover all active tennis and soccer sports
+    discovered_tennis = []
+    discovered_soccer = []
     sports_url = f"https://api.the-odds-api.com/v4/sports?apiKey={API_KEY}"
     try:
         res = requests.get(sports_url, timeout=12)
         if res.status_code == 200:
             for s in res.json():
-                if s.get("active") and not s.get("has_outrights"):
+                if s.get("active"):
                     k = s.get("key", "")
                     if k.startswith("tennis_"):
-                        tennis_keys.append(k)
+                        discovered_tennis.append(k)
                     elif k.startswith("soccer_"):
-                        soccer_keys.append(k)
+                        discovered_soccer.append(k)
     except Exception as e:
-        print(f"Error fetching active sports: {e}")
+        print(f"Discovery error: {e}")
 
-    # Fallback to known circuits if dynamic discovery is quiet
-    if not tennis_keys:
-        tennis_keys = [
-            "tennis_atp_challenger", 
-            "tennis_atp_finals", 
-            "tennis_wta_finals", 
-            "tennis_atp_aus_open", 
-            "tennis_wta_aus_open"
-        ]
+    # Fallback to current tournament keys
+    known_tennis = [
+        "tennis_wta_finals",
+        "tennis_atp_finals",
+        "tennis_atp_stockholm",
+        "tennis_atp_challenger",
+        "tennis_atp_metz",
+        "tennis_atp_belgrade"
+    ]
+    for k in known_tennis:
+        if k not in discovered_tennis:
+            discovered_tennis.append(k)
 
     active_sport_groups = {
-        "tennis": tennis_keys,
+        "tennis": discovered_tennis,
         "football": DEFAULT_GROUPS["football"],
         "basketball": DEFAULT_GROUPS["basketball"],
         "hockey": DEFAULT_GROUPS["hockey"],
-        "soccer": soccer_keys if soccer_keys else DEFAULT_GROUPS["soccer"]
+        "soccer": discovered_soccer if discovered_soccer else DEFAULT_GROUPS["soccer"]
     }
 
+    # Fetch 4 matches per sport, 5 for tennis
     for group, keys in active_sport_groups.items():
-        # Fetch up to 4 matches per sport
-        group_items = fetch_group_matches(group, keys, limit=4)
+        limit = 5 if group == "tennis" else 4
+        group_items = fetch_group_matches(group, keys, limit=limit)
         all_data.extend(group_items)
 
     all_data.sort(key=lambda x: x["gameDate"])
