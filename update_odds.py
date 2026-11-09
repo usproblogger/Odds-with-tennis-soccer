@@ -21,8 +21,8 @@ NAME_BUZZ = {
     "hsieh": 86, "ostapenko": 88, "siniakova": 87, "townsend": 86,
     "errani": 84, "paolini": 88, "swiatek": 96, "sabalenka": 95,
     "sinner": 96, "alcaraz": 96, "djokovic": 95, "zverev": 90, "medvedev": 90,
-    "mannarino": 82, "michelsen": 84, "sonego": 82, "halys": 80, "cerundolo": 81,
-    "tirante": 78, "shevchenko": 79, "ruud": 86, "fritz": 87,
+    "mannarino": 83, "shevchenko": 79, "michelsen": 84, "cerundolo": 81,
+    "halys": 80, "sonego": 82, "tirante": 78, "ruud": 86, "fritz": 87,
     "real madrid": 96, "barcelona": 95, "arsenal": 90, "bayern": 92,
     "manchester city": 94, "liverpool": 93, "chelsea": 88, "inter": 88,
     "chiefs": 95, "bills": 90, "cowboys": 88, "patriots": 85, "packers": 87, "lions": 86,
@@ -60,36 +60,21 @@ def to_american_odds(decimal_odds):
 
 def get_fallback_tennis():
     now = datetime.now(timezone.utc)
-    t1 = (now + timedelta(hours=18)).isoformat()
-    t2 = (now + timedelta(hours=20)).isoformat()
-    t3 = (now + timedelta(hours=28)).isoformat()
-    t4 = (now + timedelta(hours=30)).isoformat()
     return [
         {
             "sport": "tennis",
-            "gameDate": t1,
-            "awayTeam": "Jessica Pegula",
-            "homeTeam": "Marta Kostyuk",
-            "awayOdds": "-170",
-            "homeOdds": "+147",
-            "favTeam": "Jessica Pegula",
-            "leadML": -170,
-            "gap": 16
+            "gameDate": (now + timedelta(hours=12)).isoformat(),
+            "awayTeam": "Alexander Shevchenko",
+            "homeTeam": "Adrian Mannarino",
+            "awayOdds": "+102",
+            "homeOdds": "-122",
+            "favTeam": "Adrian Mannarino",
+            "leadML": -122,
+            "gap": 14
         },
         {
             "sport": "tennis",
-            "gameDate": t2,
-            "awayTeam": "Cori Gauff",
-            "homeTeam": "Linda Noskova",
-            "awayOdds": "-164",
-            "homeOdds": "+144",
-            "favTeam": "Cori Gauff",
-            "leadML": -164,
-            "gap": 18
-        },
-        {
-            "sport": "tennis",
-            "gameDate": t3,
+            "gameDate": (now + timedelta(hours=12, minutes=1)).isoformat(),
             "awayTeam": "Alex Michelsen",
             "homeTeam": "Juan Manuel Cerundolo",
             "awayOdds": "-338",
@@ -100,7 +85,62 @@ def get_fallback_tennis():
         },
         {
             "sport": "tennis",
-            "gameDate": t4,
+            "gameDate": (now + timedelta(hours=13, minutes=35)).isoformat(),
+            "awayTeam": "Quentin Halys",
+            "homeTeam": "Lorenzo Sonego",
+            "awayOdds": "-132",
+            "homeOdds": "+112",
+            "favTeam": "Quentin Halys",
+            "leadML": -132,
+            "gap": 14
+        },
+        {
+            "sport": "tennis",
+            "gameDate": (now + timedelta(hours=20, minutes=5)).isoformat(),
+            "awayTeam": "Jessica Pegula",
+            "homeTeam": "Marta Kostyuk",
+            "awayOdds": "-170",
+            "homeOdds": "+147",
+            "favTeam": "Jessica Pegula",
+            "leadML": -170,
+            "gap": 16
+        },
+        {
+            "sport": "tennis",
+            "gameDate": (now + timedelta(hours=21, minutes=35)).isoformat(),
+            "awayTeam": "Cori Gauff",
+            "homeTeam": "Linda Noskova",
+            "awayOdds": "-164",
+            "homeOdds": "+144",
+            "favTeam": "Cori Gauff",
+            "leadML": -164,
+            "gap": 18
+        },
+        {
+            "sport": "tennis",
+            "gameDate": (now + timedelta(hours=23)).isoformat(),
+            "awayTeam": "Siniakova & Townsend",
+            "homeTeam": "Perez & Schuurs",
+            "awayOdds": "-546",
+            "homeOdds": "+359",
+            "favTeam": "Siniakova & Townsend",
+            "leadML": -546,
+            "gap": 17
+        },
+        {
+            "sport": "tennis",
+            "gameDate": (now + timedelta(hours=24, minutes=30)).isoformat(),
+            "awayTeam": "Errani & Paolini",
+            "homeTeam": "Kudermetova & Chan",
+            "awayOdds": "-110",
+            "homeOdds": "-110",
+            "favTeam": "Errani & Paolini",
+            "leadML": -110,
+            "gap": 14
+        },
+        {
+            "sport": "tennis",
+            "gameDate": (now + timedelta(hours=28)).isoformat(),
             "awayTeam": "Mertens & Zhang",
             "homeTeam": "Dabrowski & Stefani",
             "awayOdds": "+171",
@@ -242,11 +282,11 @@ def fetch_odds():
     }
 
     for group, keys in active_sport_groups.items():
-        limit = 5 if group == "tennis" else 4
+        limit = 8 if group == "tennis" else 4
         group_items = fetch_group_matches(group, keys, limit=limit)
         
-        # If the API returned zero tennis matches for the current window, use the fallback live slate
-        if group == "tennis" and len(group_items) == 0:
+        if group == "tennis" and len(group_items) < 4:
+            # Fallback to the full 8-match ATP/WTA BetOnline slate
             group_items = get_fallback_tennis()
 
         all_data.extend(group_items)
@@ -259,3 +299,4 @@ if __name__ == "__main__":
     with open("odds_data.json", "w") as f:
         json.dump(data, f, indent=2)
     print(f"Successfully generated odds_data.json with {len(data)} events.")
+    
