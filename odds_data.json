@@ -26,10 +26,10 @@
     "gameDate": "2026-11-10T00:10:00Z",
     "awayTeam": "Washington Wizards",
     "homeTeam": "Detroit Pistons",
-    "awayOdds": "+320",
-    "homeOdds": "-400",
+    "awayOdds": "+310",
+    "homeOdds": "-385",
     "favTeam": "Detroit Pistons",
-    "leadML": -400,
+    "leadML": -385,
     "gap": 14
   },
   {
@@ -92,10 +92,10 @@
     "gameDate": "2026-11-11T00:10:00Z",
     "awayTeam": "Colorado Avalanche",
     "homeTeam": "Toronto Maple Leafs",
-    "awayOdds": "-161",
-    "homeOdds": "+136",
+    "awayOdds": "-154",
+    "homeOdds": "+130",
     "favTeam": "Colorado Avalanche",
-    "leadML": -161,
+    "leadML": -154,
     "gap": 14
   },
   {
