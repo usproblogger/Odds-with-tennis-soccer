@@ -15,10 +15,10 @@
     "gameDate": "2026-11-10T00:10:00Z",
     "awayTeam": "Cleveland Cavaliers",
     "homeTeam": "Charlotte Hornets",
-    "awayOdds": "-345",
-    "homeOdds": "+280",
+    "awayOdds": "-333",
+    "homeOdds": "+265",
     "favTeam": "Cleveland Cavaliers",
-    "leadML": -345,
+    "leadML": -333,
     "gap": 14
   },
   {
@@ -48,10 +48,10 @@
     "gameDate": "2026-11-10T01:10:00Z",
     "awayTeam": "New York Rangers",
     "homeTeam": "Edmonton Oilers",
-    "awayOdds": "+136",
-    "homeOdds": "-164",
+    "awayOdds": "+134",
+    "homeOdds": "-161",
     "favTeam": "Edmonton Oilers",
-    "leadML": -164,
+    "leadML": -161,
     "gap": 14
   },
   {
@@ -88,6 +88,28 @@
     "gap": 14
   },
   {
+    "sport": "tennis",
+    "gameDate": "2026-11-10T17:46:35.012820+00:00",
+    "awayTeam": "Jessica Pegula",
+    "homeTeam": "Marta Kostyuk",
+    "awayOdds": "-170",
+    "homeOdds": "+147",
+    "favTeam": "Jessica Pegula",
+    "leadML": -170,
+    "gap": 16
+  },
+  {
+    "sport": "tennis",
+    "gameDate": "2026-11-10T19:46:35.012820+00:00",
+    "awayTeam": "Cori Gauff",
+    "homeTeam": "Linda Noskova",
+    "awayOdds": "-164",
+    "homeOdds": "+144",
+    "favTeam": "Cori Gauff",
+    "leadML": -164,
+    "gap": 18
+  },
+  {
     "sport": "hockey",
     "gameDate": "2026-11-11T00:10:00Z",
     "awayTeam": "Colorado Avalanche",
@@ -96,6 +118,28 @@
     "homeOdds": "+130",
     "favTeam": "Colorado Avalanche",
     "leadML": -154,
+    "gap": 14
+  },
+  {
+    "sport": "tennis",
+    "gameDate": "2026-11-11T03:46:35.012820+00:00",
+    "awayTeam": "Alex Michelsen",
+    "homeTeam": "Juan Manuel Cerundolo",
+    "awayOdds": "-338",
+    "homeOdds": "+268",
+    "favTeam": "Alex Michelsen",
+    "leadML": -338,
+    "gap": 15
+  },
+  {
+    "sport": "tennis",
+    "gameDate": "2026-11-11T05:46:35.012820+00:00",
+    "awayTeam": "Mertens & Zhang",
+    "homeTeam": "Dabrowski & Stefani",
+    "awayOdds": "+171",
+    "homeOdds": "-226",
+    "favTeam": "Dabrowski & Stefani",
+    "leadML": -226,
     "gap": 14
   },
   {
@@ -125,10 +169,10 @@
     "gameDate": "2026-11-14T19:30:00Z",
     "awayTeam": "Avai",
     "homeTeam": "Am\u00e9rica Mineiro",
-    "awayOdds": "-118",
+    "awayOdds": "-115",
     "homeOdds": "+290",
     "favTeam": "Avai",
-    "leadML": -118,
+    "leadML": -115,
     "gap": 14
   },
   {
@@ -136,10 +180,10 @@
     "gameDate": "2026-11-14T21:30:00Z",
     "awayTeam": "Atletico Mineiro",
     "homeTeam": "Mirassol",
-    "awayOdds": "+260",
-    "homeOdds": "+105",
+    "awayOdds": "+250",
+    "homeOdds": "+107",
     "favTeam": "Mirassol",
-    "leadML": 105,
+    "leadML": 107,
     "gap": 14
   },
   {
@@ -147,10 +191,10 @@
     "gameDate": "2026-11-14T23:30:00Z",
     "awayTeam": "Vasco da Gama",
     "homeTeam": "Chapecoense",
-    "awayOdds": "-156",
-    "homeOdds": "+360",
+    "awayOdds": "-152",
+    "homeOdds": "+380",
     "favTeam": "Vasco da Gama",
-    "leadML": -156,
+    "leadML": -152,
     "gap": 14
   },
   {
