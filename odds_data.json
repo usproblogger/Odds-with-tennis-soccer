@@ -4,32 +4,32 @@
     "gameDate": "2026-11-10T00:10:00Z",
     "awayTeam": "Los Angeles Lakers",
     "homeTeam": "Atlanta Hawks",
-    "awayOdds": "+116",
-    "homeOdds": "-135",
+    "awayOdds": "+108",
+    "homeOdds": "-139",
     "favTeam": "Atlanta Hawks",
-    "leadML": -135,
+    "leadML": -139,
     "gap": 19
   },
   {
     "sport": "basketball",
-    "gameDate": "2026-11-10T00:10:00Z",
+    "gameDate": "2026-11-10T00:11:00Z",
     "awayTeam": "Cleveland Cavaliers",
     "homeTeam": "Charlotte Hornets",
-    "awayOdds": "-323",
-    "homeOdds": "+260",
+    "awayOdds": "-250",
+    "homeOdds": "+190",
     "favTeam": "Cleveland Cavaliers",
-    "leadML": -323,
+    "leadML": -250,
     "gap": 14
   },
   {
     "sport": "basketball",
-    "gameDate": "2026-11-10T00:10:00Z",
+    "gameDate": "2026-11-10T00:12:00Z",
     "awayTeam": "Washington Wizards",
     "homeTeam": "Detroit Pistons",
-    "awayOdds": "+315",
-    "homeOdds": "-400",
+    "awayOdds": "+330",
+    "homeOdds": "-476",
     "favTeam": "Detroit Pistons",
-    "leadML": -400,
+    "leadML": -476,
     "gap": 14
   },
   {
@@ -37,10 +37,10 @@
     "gameDate": "2026-11-10T00:40:00Z",
     "awayTeam": "Memphis Grizzlies",
     "homeTeam": "Toronto Raptors",
-    "awayOdds": "-122",
-    "homeOdds": "+104",
+    "awayOdds": "-123",
+    "homeOdds": "+106",
     "favTeam": "Memphis Grizzlies",
-    "leadML": -122,
+    "leadML": -123,
     "gap": 14
   },
   {
@@ -59,10 +59,10 @@
     "gameDate": "2026-11-10T01:15:00Z",
     "awayTeam": "Buffalo Bills",
     "homeTeam": "Minnesota Vikings",
-    "awayOdds": "-192",
-    "homeOdds": "+160",
+    "awayOdds": "-196",
+    "homeOdds": "+164",
     "favTeam": "Buffalo Bills",
-    "leadML": -192,
+    "leadML": -196,
     "gap": 15
   },
   {
@@ -89,7 +89,7 @@
   },
   {
     "sport": "tennis",
-    "gameDate": "2026-11-10T11:59:18.284855+00:00",
+    "gameDate": "2026-11-10T12:30:11.656117+00:00",
     "awayTeam": "Alexander Shevchenko",
     "homeTeam": "Adrian Mannarino",
     "awayOdds": "+102",
@@ -100,7 +100,7 @@
   },
   {
     "sport": "tennis",
-    "gameDate": "2026-11-10T12:00:18.284855+00:00",
+    "gameDate": "2026-11-10T12:31:11.656117+00:00",
     "awayTeam": "Alex Michelsen",
     "homeTeam": "Juan Manuel Cerundolo",
     "awayOdds": "-338",
@@ -111,7 +111,7 @@
   },
   {
     "sport": "tennis",
-    "gameDate": "2026-11-10T13:34:18.284855+00:00",
+    "gameDate": "2026-11-10T14:05:11.656117+00:00",
     "awayTeam": "Quentin Halys",
     "homeTeam": "Lorenzo Sonego",
     "awayOdds": "-132",
@@ -122,7 +122,7 @@
   },
   {
     "sport": "tennis",
-    "gameDate": "2026-11-10T20:04:18.284855+00:00",
+    "gameDate": "2026-11-10T20:35:11.656117+00:00",
     "awayTeam": "Jessica Pegula",
     "homeTeam": "Marta Kostyuk",
     "awayOdds": "-170",
@@ -133,7 +133,7 @@
   },
   {
     "sport": "tennis",
-    "gameDate": "2026-11-10T21:34:18.284855+00:00",
+    "gameDate": "2026-11-10T22:05:11.656117+00:00",
     "awayTeam": "Cori Gauff",
     "homeTeam": "Linda Noskova",
     "awayOdds": "-164",
@@ -144,7 +144,7 @@
   },
   {
     "sport": "tennis",
-    "gameDate": "2026-11-10T22:59:18.284855+00:00",
+    "gameDate": "2026-11-10T23:30:11.656117+00:00",
     "awayTeam": "Siniakova & Townsend",
     "homeTeam": "Perez & Schuurs",
     "awayOdds": "-546",
@@ -166,7 +166,7 @@
   },
   {
     "sport": "tennis",
-    "gameDate": "2026-11-11T00:29:18.284855+00:00",
+    "gameDate": "2026-11-11T01:00:11.656117+00:00",
     "awayTeam": "Errani & Paolini",
     "homeTeam": "Kudermetova & Chan",
     "awayOdds": "-110",
@@ -177,7 +177,7 @@
   },
   {
     "sport": "tennis",
-    "gameDate": "2026-11-11T03:59:18.284855+00:00",
+    "gameDate": "2026-11-11T04:30:11.656117+00:00",
     "awayTeam": "Mertens & Zhang",
     "homeTeam": "Dabrowski & Stefani",
     "awayOdds": "+171",
