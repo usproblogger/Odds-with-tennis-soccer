@@ -15,10 +15,10 @@
     "gameDate": "2026-11-11T21:10:00Z",
     "awayTeam": "Mirra Andreeva",
     "homeTeam": "Aryna Sabalenka",
-    "awayOdds": "-111",
-    "homeOdds": "-111",
-    "favTeam": "Aryna Sabalenka",
-    "leadML": -111,
+    "awayOdds": "-112",
+    "homeOdds": "-110",
+    "favTeam": "Mirra Andreeva",
+    "leadML": -112,
     "gap": 20
   },
   {
@@ -26,7 +26,7 @@
     "gameDate": "2026-11-11T22:00:00Z",
     "awayTeam": "Nautico PE",
     "homeTeam": "Londrina",
-    "awayOdds": "+344",
+    "awayOdds": "+346",
     "homeOdds": "-132",
     "favTeam": "Londrina",
     "leadML": -132,
@@ -37,10 +37,10 @@
     "gameDate": "2026-11-12T00:10:00Z",
     "awayTeam": "Boston Celtics",
     "homeTeam": "Toronto Raptors",
-    "awayOdds": "-294",
-    "homeOdds": "+235",
+    "awayOdds": "-204",
+    "homeOdds": "+172",
     "favTeam": "Boston Celtics",
-    "leadML": -294,
+    "leadML": -204,
     "gap": 17
   },
   {
@@ -48,10 +48,10 @@
     "gameDate": "2026-11-12T00:10:00Z",
     "awayTeam": "Cleveland Cavaliers",
     "homeTeam": "New York Knicks",
-    "awayOdds": "+142",
-    "homeOdds": "-167",
+    "awayOdds": "+138",
+    "homeOdds": "-164",
     "favTeam": "New York Knicks",
-    "leadML": -167,
+    "leadML": -164,
     "gap": 14
   },
   {
@@ -59,10 +59,10 @@
     "gameDate": "2026-11-12T00:10:00Z",
     "awayTeam": "Washington Wizards",
     "homeTeam": "Indiana Pacers",
-    "awayOdds": "+139",
-    "homeOdds": "-167",
+    "awayOdds": "+124",
+    "homeOdds": "-147",
     "favTeam": "Indiana Pacers",
-    "leadML": -167,
+    "leadML": -147,
     "gap": 14
   },
   {
@@ -92,10 +92,10 @@
     "gameDate": "2026-11-12T01:10:00Z",
     "awayTeam": "Brooklyn Nets",
     "homeTeam": "New Orleans Pelicans",
-    "awayOdds": "+156",
-    "homeOdds": "-185",
+    "awayOdds": "+136",
+    "homeOdds": "-161",
     "favTeam": "New Orleans Pelicans",
-    "leadML": -185,
+    "leadML": -161,
     "gap": 14
   },
   {
@@ -125,10 +125,10 @@
     "gameDate": "2026-11-12T20:00:00Z",
     "awayTeam": "Coco Gauff",
     "homeTeam": "Marta Kostyuk",
-    "awayOdds": "-357",
-    "homeOdds": "+245",
+    "awayOdds": "-278",
+    "homeOdds": "+195",
     "favTeam": "Coco Gauff",
-    "leadML": -357,
+    "leadML": -278,
     "gap": 14
   },
   {
@@ -147,10 +147,10 @@
     "gameDate": "2026-11-12T22:00:00Z",
     "awayTeam": "Operario PR",
     "homeTeam": "Ponte Preta",
-    "awayOdds": "-159",
-    "homeOdds": "+390",
+    "awayOdds": "-172",
+    "homeOdds": "+400",
     "favTeam": "Operario PR",
-    "leadML": -159,
+    "leadML": -172,
     "gap": 14
   },
   {
@@ -158,10 +158,10 @@
     "gameDate": "2026-11-13T01:15:00Z",
     "awayTeam": "Washington Commanders",
     "homeTeam": "New York Giants",
-    "awayOdds": "+114",
-    "homeOdds": "-135",
+    "awayOdds": "+120",
+    "homeOdds": "-143",
     "favTeam": "New York Giants",
-    "leadML": -135,
+    "leadML": -143,
     "gap": 14
   },
   {
@@ -180,10 +180,10 @@
     "gameDate": "2026-11-14T23:30:00Z",
     "awayTeam": "Vasco da Gama",
     "homeTeam": "Chapecoense",
-    "awayOdds": "-152",
-    "homeOdds": "+380",
+    "awayOdds": "-159",
+    "homeOdds": "+390",
     "favTeam": "Vasco da Gama",
-    "leadML": -152,
+    "leadML": -159,
     "gap": 14
   },
   {
@@ -213,10 +213,10 @@
     "gameDate": "2026-11-15T18:00:00Z",
     "awayTeam": "Buffalo Bills",
     "homeTeam": "New York Jets",
-    "awayOdds": "-417",
-    "homeOdds": "+320",
+    "awayOdds": "-400",
+    "homeOdds": "+310",
     "favTeam": "Buffalo Bills",
-    "leadML": -417,
+    "leadML": -400,
     "gap": 15
   }
 ]
